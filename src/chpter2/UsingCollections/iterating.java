@@ -2,6 +2,7 @@ package chpter2.UsingCollections;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class iterating {
     public static void main(String[] args) {
@@ -11,8 +12,14 @@ public class iterating {
             System.out.println(friends.get(i));
         }*/
 
-        for (String name : friends) {
+        /*for (String name : friends) {
             System.out.println(name);
-        }
+        }*/
+
+        friends.forEach(new Consumer<String>() {
+            public void accept(String name) {
+                System.out.println(name);
+            }
+        });
     }
 }
