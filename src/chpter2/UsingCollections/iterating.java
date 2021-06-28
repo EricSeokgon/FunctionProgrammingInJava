@@ -7,8 +7,12 @@ public class iterating {
     public static void main(String[] args) {
         final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Scott");
 
-        for (int i = 0; i < friends.size(); i++) {
+        /*for (int i = 0; i < friends.size(); i++) {
             System.out.println(friends.get(i));
+        }*/
+
+        for (String name : friends) {
+            System.out.println(name);
         }
     }
 }
