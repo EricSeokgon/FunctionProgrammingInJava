@@ -12,21 +12,21 @@ public class DiscountImperative {
                 new BigDecimal("45"), new BigDecimal("12")
         );
 
-        /*BigDecimal totalOfDiscountePrices = BigDecimal.ZERO;
+        /*BigDecimal totalOfDiscountPrices = BigDecimal.ZERO;
 
         for (BigDecimal price : prices) {
             if (price.compareTo(BigDecimal.valueOf(20)) > 0) {
-                totalOfDiscountePrices = totalOfDiscountePrices.add(price.multiply(BigDecimal.valueOf(0.9)));
+                totalOfDiscountPrices = totalOfDiscountPrices.add(price.multiply(BigDecimal.valueOf(0.9)));
             }
-            System.out.println("Total of discounted prices: " + totalOfDiscountePrices);
+            System.out.println("Total of discounted prices: " + totalOfDiscountPrices);
         }*/
 
-        final BigDecimal totalOfDiscountePrices =
+        final BigDecimal totalOfDiscountPrices =
                 prices.stream()
                         .filter(price -> price.compareTo(BigDecimal.valueOf(20)) > 0)
                         .map(price -> price.multiply(BigDecimal.valueOf(0.9)))
                         .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-        System.out.println("Total of discounted prices: " + totalOfDiscountePrices);
+        System.out.println("Total of discounted prices: " + totalOfDiscountPrices);
     }
 }
