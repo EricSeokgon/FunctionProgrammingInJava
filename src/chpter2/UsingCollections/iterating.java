@@ -21,6 +21,14 @@ public class iterating {
             }
         });*/
 
-        friends.forEach((final String name) -> System.out.println(name));
+        /*friends.forEach((final String name) -> System.out.println(name));*/
+
+        /*friends.forEach((name) -> System.out.println(name));*/
+
+        /*friends.forEach(name -> System.out.println(name));*/
+
+        friends.forEach(System.out::println);
+
+
     }
 }
