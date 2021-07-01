@@ -11,9 +11,11 @@ public class Transform {
 
         final List<String> uppercaseNames = new ArrayList<String>();
 
-        for (String name : friends) {
+        /*for (String name : friends) {
             uppercaseNames.add(name.toLowerCase());
-        }
+        }*/
+
+        friends.forEach(name -> uppercaseNames.add(name.toLowerCase()));
         System.out.println(uppercaseNames);
     }
 }
