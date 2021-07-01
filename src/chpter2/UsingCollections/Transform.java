@@ -9,13 +9,17 @@ public class Transform {
 
     public static void main(String[] args) {
 
-        final List<String> uppercaseNames = new ArrayList<String>();
+        //final List<String> uppercaseNames = new ArrayList<String>();
 
         /*for (String name : friends) {
             uppercaseNames.add(name.toLowerCase());
         }*/
 
-        friends.forEach(name -> uppercaseNames.add(name.toLowerCase()));
-        System.out.println(uppercaseNames);
+        /*friends.forEach(name -> uppercaseNames.add(name.toLowerCase()));*/
+
+        friends.stream()
+                .map(name -> name.toUpperCase())
+                .forEach(name -> System.out.print(name + " "));
+        System.out.println();
     }
 }
