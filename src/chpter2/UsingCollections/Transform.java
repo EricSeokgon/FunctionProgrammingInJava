@@ -1,6 +1,5 @@
 package chpter2.UsingCollections;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,9 +16,15 @@ public class Transform {
 
         /*friends.forEach(name -> uppercaseNames.add(name.toLowerCase()));*/
 
-        friends.stream()
+        /*friends.stream()
                 .map(name -> name.toUpperCase())
                 .forEach(name -> System.out.print(name + " "));
-        System.out.println();
+        System.out.println();*/
+
+        friends.stream()
+                .map(name -> name.length())
+                .forEach(count -> System.out.print(count + " "));
+
+
     }
 }
