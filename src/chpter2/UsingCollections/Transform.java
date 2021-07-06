@@ -21,10 +21,13 @@ public class Transform {
                 .forEach(name -> System.out.print(name + " "));
         System.out.println();*/
 
-        friends.stream()
+        /*friends.stream()
                 .map(name -> name.length())
-                .forEach(count -> System.out.print(count + " "));
+                .forEach(count -> System.out.print(count + " "));*/
 
+        friends.stream()
+                .map(String::toUpperCase)
+                .forEach(name -> System.out.print(name));
 
     }
 }
