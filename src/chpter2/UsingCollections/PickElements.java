@@ -19,5 +19,7 @@ public class PickElements {
                 friends.stream()
                         .filter(name -> name.startsWith("N"))
                         .collect(Collectors.toList());
+
+        System.out.println(String.format("Found %d names", startsWithN.size()));
     }
 }
