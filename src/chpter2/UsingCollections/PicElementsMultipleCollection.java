@@ -1,14 +1,19 @@
 package chpter2.UsingCollections;
 
+import java.util.function.Predicate;
+
 import static chpter2.UsingCollections.Folks.*;
 
 public class PicElementsMultipleCollection {
     public static void main(String[] args) {
-        final long countFriendsStartN = friends.stream().filter(name -> name.startsWith("N")).count();
 
-        final long countComradesStartN = comrades.stream().filter(name -> name.startsWith("N")).count();
+        Predicate<String> startsWithN = name -> name.startsWith("N");
+        final long countFriendsStartN = friends.stream().filter(startsWithN).count();
 
-        final long countEditorsStartN = editors.stream().filter(name -> name.startsWith("N")).count();
+        final long countComradesStartN = comrades.stream().filter(startsWithN).count();
+
+        final long countEditorsStartN = editors.stream().filter(startsWithN).count();
+
     }
 
 }
