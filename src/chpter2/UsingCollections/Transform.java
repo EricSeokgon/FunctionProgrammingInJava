@@ -3,8 +3,10 @@ package chpter2.UsingCollections;
 import java.util.Arrays;
 import java.util.List;
 
+import static chpter2.UsingCollections.Folks.friends;
+
 public class Transform {
-    final private static List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Scott");
+    //final private static List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Scott");
 
     public static void main(String[] args) {
 
